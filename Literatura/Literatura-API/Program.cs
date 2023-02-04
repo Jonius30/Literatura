@@ -11,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPbtRepository, PbtRepository>();
+builder.Services.AddScoped<ISpiewniczekRepository, SpiewniczekRepository>();
+builder.Services.AddScoped<IZLiederRepository, ZLiederRepository>();
 
 var app = builder.Build();
 

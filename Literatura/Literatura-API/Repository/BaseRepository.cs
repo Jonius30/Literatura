@@ -21,6 +21,13 @@ namespace Literatura_API.Repository
                 yield return match.Index;
             }
         }
+        
+        public string ConvertQuotes(string content)
+        {
+            content = content.Replace(@"\""", @"""");
+            content = content.Replace(@"\'", @"'");
+            return content;
+        }
         private string HtmlToSpecial(string content)
         {
             content = content.Replace("<br>", "¼");
