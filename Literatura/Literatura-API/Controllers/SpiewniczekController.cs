@@ -22,6 +22,18 @@ namespace Literatura_API.Controllers
             return Ok(_spiewniczekRepository.GetSpiewniczek(id));
         }
 
+        [HttpGet("Next/{id}")]
+        public IActionResult GetNextSpiewniczek(int id)
+        {
+            return Ok(_spiewniczekRepository.GetNextSpiewniczek(id));
+        }
+
+        [HttpGet("Previous/{id}")]
+        public IActionResult GetPreviousSpiewniczek(int id)
+        {
+            return Ok(_spiewniczekRepository.GetPreviousSpiewniczek(id));
+        }
+
         [HttpPost("Search")]
         public IActionResult SearchSpiewniczek(string searchString)
         {

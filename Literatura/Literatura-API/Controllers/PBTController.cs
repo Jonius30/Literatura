@@ -21,6 +21,18 @@ namespace Literatura_API.Controllers
             return Ok(_pbtRepository.GetPbt(id));
         }
 
+        [HttpGet("Next/{id}")]
+        public IActionResult GetNextPbt(int id)
+        {
+            return Ok(_pbtRepository.GetNextPbt(id));
+        }
+
+        [HttpGet("Previous/{id}")]
+        public IActionResult GetPreviousPbt(int id)
+        {
+            return Ok(_pbtRepository.GetPreviousPbt(id));
+        }
+
         [HttpPost("Search")]
         public IActionResult SearchPbt(string searchString)
         {

@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPbtRepository, PbtRepository>();
 builder.Services.AddScoped<ISpiewniczekRepository, SpiewniczekRepository>();
 builder.Services.AddScoped<IZLiederRepository, ZLiederRepository>();
+builder.Services.AddScoped<IMannaRepository, MannaRepository>();
 
 var app = builder.Build();
 
