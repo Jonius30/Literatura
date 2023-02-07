@@ -58,7 +58,10 @@ namespace Literatura_API.Repository
                             nextMonth = 1;
                     }
                     else
+                    {
+                        nextMonth= month;
                         nextDay = day + 1;
+                    }
                 }
                 MySqlConnection.Close(); 
             }

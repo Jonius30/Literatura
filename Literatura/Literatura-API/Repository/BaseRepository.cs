@@ -1,6 +1,7 @@
 ﻿using Literatura_API.Models;
 using MySqlConnector;
 using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Literatura_API.Repository
 {
@@ -33,6 +34,8 @@ namespace Literatura_API.Repository
             content = content.Replace("<br>", "¼");
             content = content.Replace("<b>", "ᾠ");
             content = content.Replace("</b>", "ᾡ");
+            Regex x = new Regex("(<img)(.*?)(\">)");
+            content = x.Replace(content, "");
             return content;
         }
         private string SpecialToHtml(string content)
